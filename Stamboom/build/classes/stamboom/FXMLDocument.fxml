@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="425.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stamboom.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <ListView fx:id="lv_personen" layoutX="14.0" layoutY="10.0" prefHeight="208.0" prefWidth="316.0" />
+      <TextField fx:id="txt_naam" layoutX="341.0" layoutY="22.0" promptText="Naam" />
+      <TextField fx:id="txt_leeftijd" layoutX="341.0" layoutY="62.0" promptText="Leeftijd" />
+      <RadioButton fx:id="rb_man" layoutX="341.0" layoutY="104.0" mnemonicParsing="false" selected="true" text="Man">
+         <toggleGroup>
+            <ToggleGroup fx:id="geslacht" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rb_vrouw" layoutX="435.0" layoutY="104.0" mnemonicParsing="false" text="Vrouw" toggleGroup="$geslacht" />
+      <ComboBox fx:id="cb_vader" layoutX="341.0" layoutY="141.0" prefWidth="150.0" promptText="Vader" />
+      <ComboBox fx:id="cb_moeder" layoutX="341.0" layoutY="182.0" prefWidth="150.0" promptText="Moeder" />
+      <Button fx:id="btn_voegtoe" layoutX="444.0" layoutY="218.0" mnemonicParsing="false" onAction="#btn_voegPersoonToe" prefHeight="31.0" prefWidth="94.0" text="Voeg toe" />
+      <Button fx:id="btn_showstamboom" layoutX="14.0" layoutY="218.0" mnemonicParsing="false" onAction="#btn_showStamboom" text="Show stamboom" />
+      <Button fx:id="btn_slaStamboomOp" layoutX="161.0" layoutY="218.0" mnemonicParsing="false" onAction="#btn_slaStamboomOp" text="Sla stamboom op" />
+      <TextArea fx:id="txtarea_stamboom" editable="false" layoutX="14.0" layoutY="260.0" prefHeight="200.0" prefWidth="516.0">
+         <font>
+            <Font name="Courier New" size="15.0" />
+         </font></TextArea>
+      <Button fx:id="btn_slapersonenop" layoutX="306.0" layoutY="218.0" mnemonicParsing="false" onAction="#btn_slaPersonenOp" text="Sla personen op" />
+    </children>
+</AnchorPane>
